@@ -125,27 +125,55 @@ function App() {
       history.scrollRestoration = 'manual'
     }
     
-    // Force scroll to absolute top with multiple methods
+    // More aggressive scroll to top function
     const forceScrollToTop = () => {
-      // Try multiple scroll methods to ensure it works
+      // Multiple immediate scroll attempts
       window.scrollTo(0, 0)
       window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+      window.scroll(0, 0)
+      
+      // Force document scroll
       document.documentElement.scrollTop = 0
       document.body.scrollTop = 0
+      document.scrollingElement.scrollTop = 0
       
-      // Also try scrolling all possible containers
-      const containers = document.querySelectorAll('.min-h-screen, [data-scroll-container]')
-      containers.forEach(container => {
-        if (container.scrollTop !== undefined) {
-          container.scrollTop = 0
+      // Reset all possible scroll containers
+      const allElements = document.querySelectorAll('*')
+      allElements.forEach(element => {
+        if (element.scrollTop > 0) {
+          element.scrollTop = 0
+        }
+        if (element.scrollLeft > 0) {
+          element.scrollLeft = 0
         }
       })
+      
+      // Force main container scroll
+      const mainContainer = document.querySelector('#root')
+      if (mainContainer) {
+        mainContainer.scrollTop = 0
+      }
+      
+      // Force body and html scroll again
+      document.body.style.scrollBehavior = 'auto'
+      document.documentElement.style.scrollBehavior = 'auto'
+      window.pageYOffset = 0
+      window.pageXOffset = 0
     }
     
-    // Execute immediately and with timeout
+    // Execute multiple times with different delays to ensure it works
     forceScrollToTop()
-    setTimeout(forceScrollToTop, 0)
+    setTimeout(forceScrollToTop, 1)
     setTimeout(forceScrollToTop, 10)
+    setTimeout(forceScrollToTop, 50)
+    setTimeout(forceScrollToTop, 100)
+    
+    // Also force scroll after a longer delay to catch any async rendering
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+    }, 200)
   }, [activeSection])
 
   const sections = [
