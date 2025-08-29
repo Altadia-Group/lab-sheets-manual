@@ -121,59 +121,117 @@ function App() {
     console.log('Cambiando a sección:', activeSection)
     
     // Disable browser scroll restoration
-    if ('scrollRestoration' in history) {
-      history.scrollRestoration = 'manual'
+    if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual'
     }
     
-    // More aggressive scroll to top function
+    // Production-safe scroll to top function
     const forceScrollToTop = () => {
-      // Multiple immediate scroll attempts
-      window.scrollTo(0, 0)
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
-      window.scroll(0, 0)
-      
-      // Force document scroll
-      document.documentElement.scrollTop = 0
-      document.body.scrollTop = 0
-      document.scrollingElement.scrollTop = 0
-      
-      // Reset all possible scroll containers
-      const allElements = document.querySelectorAll('*')
-      allElements.forEach(element => {
-        if (element.scrollTop > 0) {
-          element.scrollTop = 0
+      try {
+        // Ensure we're in browser environment
+        if (typeof window === 'undefined') return
+        
+        // Multiple scroll methods for maximum compatibility
+        window.scrollTo(0, 0)
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+        
+        // Alternative scroll methods
+        if (window.scroll) {
+          window.scroll(0, 0)
         }
-        if (element.scrollLeft > 0) {
-          element.scrollLeft = 0
+        
+        // Force document scroll with safety checks
+        if (document.documentElement) {
+          document.documentElement.scrollTop = 0
+          document.documentElement.scrollLeft = 0
         }
+        
+        if (document.body) {
+          document.body.scrollTop = 0
+          document.body.scrollLeft = 0
+        }
+        
+        if (document.scrollingElement) {
+          document.scrollingElement.scrollTop = 0
+          document.scrollingElement.scrollLeft = 0
+        }
+        
+        // Reset scroll behavior to ensure instant scrolling
+        if (document.documentElement && document.documentElement.style) {
+          document.documentElement.style.scrollBehavior = 'auto'
+        }
+        if (document.body && document.body.style) {
+          document.body.style.scrollBehavior = 'auto'
+        }
+        
+        // Force main container scroll with safety check
+        const mainContainer = document.querySelector('#root')
+        if (mainContainer && typeof mainContainer.scrollTop !== 'undefined') {
+          mainContainer.scrollTop = 0
+          mainContainer.scrollLeft = 0
+        }
+        
+        // Reset any scrollable containers
+        const scrollableElements = document.querySelectorAll('[style*="overflow"], .overflow-auto, .overflow-scroll, .overflow-y-auto, .overflow-y-scroll')
+        scrollableElements.forEach(element => {
+          try {
+            if (element.scrollTop > 0) {
+              element.scrollTop = 0
+            }
+            if (element.scrollLeft > 0) {
+              element.scrollLeft = 0
+            }
+          } catch (e) {
+            // Ignore errors for elements that don't support scrolling
+          }
+        })
+        
+      } catch (error) {
+        console.warn('Error during scroll reset:', error)
+        // Fallback to basic scroll
+        try {
+          window.scrollTo(0, 0)
+        } catch (fallbackError) {
+          console.warn('Fallback scroll also failed:', fallbackError)
+        }
+      }
+    }
+    
+    // Execute with progressive delays for production compatibility
+    const executeScrollReset = () => {
+      forceScrollToTop()
+      
+      // Multiple attempts with increasing delays
+      const delays = [0, 1, 10, 50, 100, 200, 300]
+      delays.forEach(delay => {
+        setTimeout(() => {
+          forceScrollToTop()
+        }, delay)
       })
       
-      // Force main container scroll
-      const mainContainer = document.querySelector('#root')
-      if (mainContainer) {
-        mainContainer.scrollTop = 0
-      }
-      
-      // Force body and html scroll again
-      document.body.style.scrollBehavior = 'auto'
-      document.documentElement.style.scrollBehavior = 'auto'
-      window.pageYOffset = 0
-      window.pageXOffset = 0
+      // Final attempt after DOM is definitely ready
+      setTimeout(() => {
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0)
+          if (document.documentElement) {
+            document.documentElement.scrollTop = 0
+          }
+          if (document.body) {
+            document.body.scrollTop = 0
+          }
+        }
+      }, 500)
     }
     
-    // Execute multiple times with different delays to ensure it works
-    forceScrollToTop()
-    setTimeout(forceScrollToTop, 1)
-    setTimeout(forceScrollToTop, 10)
-    setTimeout(forceScrollToTop, 50)
-    setTimeout(forceScrollToTop, 100)
+    // Execute immediately and after DOM is ready
+    executeScrollReset()
     
-    // Also force scroll after a longer delay to catch any async rendering
-    setTimeout(() => {
-      window.scrollTo(0, 0)
-      document.documentElement.scrollTop = 0
-      document.body.scrollTop = 0
-    }, 200)
+    // Also execute after next tick to ensure DOM updates
+    if (typeof window !== 'undefined') {
+      requestAnimationFrame(() => {
+        executeScrollReset()
+      })
+    }
   }, [activeSection])
 
   const sections = [
