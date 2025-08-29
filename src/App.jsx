@@ -49,6 +49,30 @@ import gestorEstudiosImage from './assets/gestorEstudios.png'
 import feedbackImage from './assets/feedback.png'
 import logOutImage from './assets/logOut.png'
 import informacionImage from './assets/pasted_file_Ls7UMO_image.png'
+import logoImage from './assets/logo.png'
+import gestorButtonsImage from './assets/pasted_file_Gqij4B_image.png'
+import botonesFormulaGridImage from './assets/botonesFormulaGrid.png'
+import addMaterialButtonImage from './assets/pasted_file_knEV0v_image.png'
+import materialTypeImage from './assets/pasted_file_mpiXZ8_image.png'
+import materialCreatedImage from './assets/pasted_file_pNXedx_image.png'
+import addMaterialSapImage from './assets/pasted_file_JNtLwB_image.png'
+import sapSearchImage from './assets/pasted_file_VPxjZb_image.png'
+import searchMaterialImage from './assets/pasted_file_X6mKPB_image.png'
+import materialFoundImage from './assets/pasted_file_Ghaysw_image.png'
+import observacionesButtonImage from './assets/pasted_file_VXdSrV_image.png'
+import observacionesModalImage from './assets/pasted_file_iXnX8t_image.png'
+import boton3puntosImage from './assets/boton3puntos.png'
+import guardarBotonImage from './assets/guardarBoton.png'
+import exportarBotonImage from './assets/exportarBoton.png'
+import exportPdfModalImage from './assets/pasted_file_330NN6_image.png'
+import funcionalidadesMenuImage from './assets/pasted_file_gcDpto_image.png'
+import feedbackButtonImage from './assets/pasted_file_xZtP92_image.png'
+import logoutButtonImage from './assets/pasted_file_lsWyiQ_image.png'
+import esmalteBotonImage from './assets/esmalteBoton.png'
+import menuExtendedImage from './assets/pasted_file_zcJDvR_image.png'
+import informacionTabImage from './assets/pasted_file_nA9umq_image.png'
+import informacionContentImage from './assets/pasted_file_WJpmIa_image.png'
+import pruebasTabImage from './assets/pasted_file_wpIr7y_image.png'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -162,7 +186,7 @@ function App() {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-red-600 rounded-full blur-xl opacity-20 scale-110"></div>
                   <img 
-                    src="/src/assets/logo.png" 
+                    src={logoImage} 
                     alt="Logo Lab Sheets" 
                     className="h-40 w-auto relative z-10 drop-shadow-2xl"
                   />
@@ -503,7 +527,7 @@ function App() {
             </Card>
               
               <img 
-                 src="/src/assets/pasted_file_Gqij4B_image.png" 
+                 src={gestorButtonsImage} 
                  alt="Pantalla de Formulación" 
                  className="w-full h-auto mx-auto max-w-4xl rounded-lg mt-32 scale-150"
                />
@@ -519,7 +543,7 @@ function App() {
                <div className="my-12">
                  <div className="-mx-8 lg:-mx-16 xl:-mx-24">
                    <img 
-                     src="/src/assets/botonesFormulaGrid.png" 
+                     src={botonesFormulaGridImage} 
                      alt="Botones de la pantalla de formulación" 
                      className="w-full h-auto mx-auto max-w-4xl rounded-lg"
                    />
@@ -554,7 +578,7 @@ function App() {
                            <div className="mb-8">
                              <h3 className="text-lg font-semibold text-center mb-4">Ventana de Añadir Componente</h3>
                              <img 
-                               src="/src/assets/pasted_file_knEV0v_image.png" 
+                               src={addMaterialButtonImage} 
                                alt="Añadir componente" 
                                className="w-1/2 h-auto rounded-lg shadow-sm mx-auto"
                              />
@@ -563,7 +587,7 @@ function App() {
                              <p>La fila se creará con el componente seleccionado. Como se muestra en la imagen, al pulsar el botón de tres puntos verticales ubicado a la izquierda:</p>
                              <div className="my-6">
                                <img 
-                                 src="/src/assets/pasted_file_mpiXZ8_image.png" 
+                                 src={materialTypeImage} 
                                  alt="Botón de tres puntos verticales" 
                                  className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                                />
@@ -575,7 +599,7 @@ function App() {
                              </ul>
                              <div className="my-6">
                                <img 
-                                 src="/src/assets/pasted_file_pNXedx_image.png" 
+                                 src={materialCreatedImage} 
                                  alt="Menú desplegable con opciones" 
                                  className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                                />
@@ -606,7 +630,7 @@ function App() {
                             <p className="font-medium">El botón de añadir material permite agregar un material a la formulación. Al ingresar el ID del material y el tipo de material, se creará una columna con esta información. Es importante tener en cuenta que esta función crea un material personalizado, que no existe previamente. La creación de columnas con materiales existentes se explicará más adelante.</p>
                             <div className="my-6">
                               <img 
-                                src="/src/assets/pasted_file_JNtLwB_image.png" 
+                                src={addMaterialSapImage} 
                                 alt="Añadir material" 
                                 className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                               />
@@ -614,7 +638,7 @@ function App() {
                             <p className="font-medium">Una vez creada la columna, se podrán rellenar las cantidades en las filas ya creadas. En este ejemplo, el ID del material es "TEST" y el tipo es "B" (Esmaltes opacos brillantes o cortes).</p>
                             <div className="my-6">
                               <img 
-                                src="/src/assets/pasted_file_VPxjZb_image.png" 
+                                src={sapSearchImage} 
                                 alt="Ejemplo de material creado" 
                                 className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                               />
@@ -648,7 +672,7 @@ function App() {
                             <p>En este ejemplo, se ha seleccionado el material ET40-44465, alternativa 1 y tipo "B". Si no se especifica la alternativa, esta se asignará automáticamente con el valor 1.</p>
                             <div className="my-6">
                               <img 
-                                src="/src/assets/pasted_file_X6mKPB_image.png" 
+                                src={searchMaterialImage} 
                                 alt="Añadir material SAP" 
                                 className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                               />
@@ -656,7 +680,7 @@ function App() {
                             <p className="font-medium">Una vez creada la columna, se observará que se ha rellenado con varios componentes y sus cantidades, los cuales se pueden editar o añadir nuevos componentes según sea necesario.</p>
                             <div className="my-6">
                               <img 
-                                src="/src/assets/pasted_file_Ghaysw_image.png" 
+                                src={materialFoundImage} 
                                 alt="Columna con componentes" 
                                 className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                               />
@@ -686,7 +710,7 @@ function App() {
                            <p className="font-medium">El botón de búsqueda de material funciona de manera similar al botón AÑADIR MATERIAL SAP. Se debe rellenar de la misma forma, pero con una variante: al pulsar Aceptar, antes de que la columna se agregue a la formulación, aparecerá una pestaña con la información del material, mostrando sus componentes y cantidades.</p>
                            <div className="my-6">
                              <img 
-                               src="/src/assets/pasted_file_VXdSrV_image.png" 
+                               src={observacionesButtonImage} 
                                alt="Búsqueda de material SAP" 
                                className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                              />
@@ -694,7 +718,7 @@ function App() {
                            <p className="font-medium">Una vez revisada la información, al pulsar Añadir material en la parte inferior derecha, el material se incorporará a la formulación.</p>
                            <div className="my-6">
                              <img 
-                               src="/src/assets/pasted_file_iXnX8t_image.png" 
+                               src={observacionesModalImage} 
                                alt="Añadir material a la formulación" 
                                className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                              />
@@ -716,7 +740,7 @@ function App() {
                    </p>
                    <div className="text-center">
                      <img 
-                       src="/src/assets/boton3puntos.png" 
+                       src={boton3puntosImage} 
                        alt="Botón de tres puntos verticales" 
                        className="w-32 h-auto mx-auto rounded-lg shadow-sm"
                      />
@@ -970,7 +994,7 @@ function App() {
                            </p>
                            <div className="flex justify-center">
                              <img 
-                               src="/src/assets/guardarBoton.png" 
+                               src={guardarBotonImage} 
                                alt="Botón Guardar" 
                                className="max-w-full h-auto rounded-lg shadow-md"
                              />
@@ -1000,7 +1024,7 @@ function App() {
                          <div className="text-lg text-gray-700 leading-relaxed space-y-6">
                            <div className="flex justify-center">
                              <img 
-                               src="/src/assets/exportarBoton.png" 
+                               src={exportarBotonImage} 
                                alt="Botón Exportar PDF" 
                                className="max-w-full h-auto rounded-lg shadow-md"
                              />
@@ -1010,7 +1034,7 @@ function App() {
                            </p>
                            <div className="flex justify-center">
                              <img 
-                               src="/src/assets/pasted_file_330NN6_image.png" 
+                               src={exportPdfModalImage} 
                                alt="Ventana de exportación PDF" 
                                className="max-w-full h-auto rounded-lg shadow-md"
                              />
@@ -1179,7 +1203,7 @@ function App() {
             {/* Imagen principal */}
              <div className="flex justify-center my-8">
                <img 
-                 src="/src/assets/pasted_file_gcDpto_image.png" 
+                 src={testApplicationImage} 
                  alt="Aplicación de Pruebas" 
                  className="max-w-full h-auto rounded-lg shadow-md"
                />
@@ -1197,7 +1221,7 @@ function App() {
 
                <div className="flex justify-center my-6">
                  <img 
-                   src="/src/assets/pasted_file_xZtP92_image.png" 
+                   src={pieceCodeSelectionImage} 
                    alt="Selección de código de pieza" 
                    className="max-w-full h-auto rounded-lg shadow-md"
                  />
@@ -1213,7 +1237,7 @@ function App() {
 
                <div className="flex justify-center my-6">
                  <img 
-                   src="/src/assets/pasted_file_lsWyiQ_image.png" 
+                   src={createPieceCodeSapImage} 
                    alt="Crear código de pieza SAP" 
                    className="max-w-full h-auto rounded-lg shadow-md"
                  />
@@ -1235,7 +1259,7 @@ function App() {
 
                <div className="flex justify-center my-6">
                  <img 
-                   src="/src/assets/esmalteBoton.png" 
+                   src={esmalteBotonImage} 
                    alt="Funcionalidad del esmalte" 
                    className="max-w-full h-auto rounded-lg shadow-md"
                  />
@@ -1269,7 +1293,7 @@ function App() {
                      </div>
                      <div className="flex justify-center mt-6">
                        <img 
-                         src="/src/assets/pasted_file_ZGmTRt_image.png" 
+                         src={mainButtonsImage} 
                          alt="Botones principales" 
                          className="max-w-full h-auto rounded-lg shadow-md"
                        />
@@ -1290,7 +1314,7 @@ function App() {
                      
                      <div className="flex justify-center mt-6">
                        <img 
-                         src="/src/assets/pasted_file_zcJDvR_image.png" 
+                         src={threeDotsOptionsImage} 
                          alt="Opciones del botón de tres puntos" 
                          className="max-w-full h-auto rounded-lg shadow-md"
                        />
@@ -1322,7 +1346,7 @@ function App() {
 
             <div className="flex justify-center my-8">
               <img 
-                src="/src/assets/pasted_file_nA9umq_image.png" 
+                src={testReviewTableImage} 
                 alt="Tabla de revisión de pruebas" 
                 className="max-w-full h-auto rounded-lg shadow-md"
               />
@@ -1338,7 +1362,7 @@ function App() {
 
             <div className="flex justify-center my-8">
                <img 
-                 src="/src/assets/pasted_file_WJpmIa_image.png" 
+                 src={pieceCodeSelectorImage} 
                  alt="Selector de código de pieza" 
                  className="max-w-full h-auto rounded-lg shadow-md"
                />
@@ -1371,7 +1395,7 @@ function App() {
                    </div>
                    <div className="flex justify-center mt-6">
                      <img 
-                       src="/src/assets/pasted_file_ZGmTRt_image.png" 
+                       src={mainButtonsImage} 
                        alt="Botones de la cabecera" 
                        className="max-w-full h-auto rounded-lg shadow-md"
                      />
@@ -1390,7 +1414,7 @@ function App() {
                    </div>
                    <div className="flex justify-center mt-6">
                      <img 
-                       src="/src/assets/pasted_file_zcJDvR_image.png" 
+                       src={threeDotsOptionsImage} 
                        alt="Opciones del botón de tres puntos" 
                        className="max-w-full h-auto rounded-lg shadow-md"
                      />
@@ -1426,7 +1450,7 @@ function App() {
             {/* Imagen principal */}
             <div className="flex justify-center my-8">
               <img 
-                src="/src/assets/pasted_file_wpIr7y_image.png" 
+                src={resultsTableImage} 
                 alt="Tabla de resultados" 
                 className="max-w-full h-auto rounded-lg shadow-md"
               />
@@ -1460,7 +1484,7 @@ function App() {
                   </div>
                   <div className="flex justify-center mt-6">
                     <img 
-                      src="/src/assets/pasted_file_ZGmTRt_image.png" 
+                      src={mainButtonsImage} 
                       alt="Botones principales" 
                       className="max-w-full h-auto rounded-lg shadow-md"
                     />
@@ -1481,7 +1505,7 @@ function App() {
                   
                   <div className="flex justify-center mt-6">
                     <img 
-                      src="/src/assets/pasted_file_zcJDvR_image.png" 
+                      src={threeDotsOptionsImage} 
                       alt="Opciones del botón de tres puntos" 
                       className="max-w-full h-auto rounded-lg shadow-md"
                     />
