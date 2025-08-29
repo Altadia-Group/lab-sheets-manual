@@ -12,6 +12,9 @@ html, body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Disable scroll restoration */
+  scroll-behavior: auto;
+  overscroll-behavior: none;
 }
 
 #root {

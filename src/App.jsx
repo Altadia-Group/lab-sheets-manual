@@ -116,6 +116,38 @@ function App() {
     }
   }, [darkMode])
 
+  // Scroll to top when section changes
+  useEffect(() => {
+    console.log('Cambiando a sección:', activeSection)
+    
+    // Disable browser scroll restoration
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual'
+    }
+    
+    // Force scroll to absolute top with multiple methods
+    const forceScrollToTop = () => {
+      // Try multiple scroll methods to ensure it works
+      window.scrollTo(0, 0)
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+      document.documentElement.scrollTop = 0
+      document.body.scrollTop = 0
+      
+      // Also try scrolling all possible containers
+      const containers = document.querySelectorAll('.min-h-screen, [data-scroll-container]')
+      containers.forEach(container => {
+        if (container.scrollTop !== undefined) {
+          container.scrollTop = 0
+        }
+      })
+    }
+    
+    // Execute immediately and with timeout
+    forceScrollToTop()
+    setTimeout(forceScrollToTop, 0)
+    setTimeout(forceScrollToTop, 10)
+  }, [activeSection])
+
   const sections = [
     { 
       id: 'inicio', 
