@@ -32,47 +32,64 @@ import ImageGallery from './components/ImageGallery.jsx'
 import TableOfContents from './components/TableOfContents.jsx'
 
 // Importar algunas imágenes clave
-import loginImage from './assets/pasted_file_3w0wHQ_image.png'
-import dashboardImage from './assets/pasted_file_6DOEvc_image.png'
-import formulationImage from './assets/pasted_file_XhP7C6_image.png'
-import gestorImage from './assets/pasted_file_W8omNS_image.png'
-import menuImage from './assets/pasted_file_ZGmTRt_image.png'
-import addComponentImage from './assets/pasted_file_ZIYZvf_image.png'
-import newGestorImage from './assets/pasted_file_gosm79_image.png'
-import iconoLogOut from './assets/iconoLogOut.png'
-import iconoExtenso from './assets/iconoExtenso.png'
-import gestorExtendidoImage from './assets/pasted_file_e23re0_image.png'
-import filtrosImage from './assets/FILTROS.png'
-import funcionalidadesImage from './assets/pasted_file_lGc70Q_image.png'
-import menuContraidoImage from './assets/pasted_file_tS9HRB_image.png'
-import gestorEstudiosImage from './assets/gestorEstudios.png'
-import feedbackImage from './assets/feedback.png'
-import logOutImage from './assets/logOut.png'
-import informacionImage from './assets/pasted_file_Ls7UMO_image.png'
-import logoImage from './assets/logo.png'
-import gestorButtonsImage from './assets/pasted_file_Gqij4B_image.png'
-import botonesFormulaGridImage from './assets/botonesFormulaGrid.png'
-import addMaterialButtonImage from './assets/pasted_file_knEV0v_image.png'
-import materialTypeImage from './assets/pasted_file_mpiXZ8_image.png'
-import materialCreatedImage from './assets/pasted_file_pNXedx_image.png'
-import addMaterialSapImage from './assets/pasted_file_JNtLwB_image.png'
-import sapSearchImage from './assets/pasted_file_VPxjZb_image.png'
-import searchMaterialImage from './assets/pasted_file_X6mKPB_image.png'
-import materialFoundImage from './assets/pasted_file_Ghaysw_image.png'
-import observacionesButtonImage from './assets/pasted_file_VXdSrV_image.png'
-import observacionesModalImage from './assets/pasted_file_iXnX8t_image.png'
-import boton3puntosImage from './assets/boton3puntos.png'
-import guardarBotonImage from './assets/guardarBoton.png'
-import exportarBotonImage from './assets/exportarBoton.png'
-import exportPdfModalImage from './assets/pasted_file_330NN6_image.png'
-import funcionalidadesMenuImage from './assets/pasted_file_gcDpto_image.png'
-import feedbackButtonImage from './assets/pasted_file_xZtP92_image.png'
-import logoutButtonImage from './assets/pasted_file_lsWyiQ_image.png'
-import esmalteBotonImage from './assets/esmalteBoton.png'
-import menuExtendedImage from './assets/pasted_file_zcJDvR_image.png'
-import informacionTabImage from './assets/pasted_file_nA9umq_image.png'
-import informacionContentImage from './assets/pasted_file_WJpmIa_image.png'
-import pruebasTabImage from './assets/pasted_file_wpIr7y_image.png'
+import loginImage from '/src/assets/pasted_file_3w0wHQ_image.png'
+import dashboardImage from '/src/assets/pasted_file_6DOEvc_image.png'
+import formulationImage from '/src/assets/pasted_file_XhP7C6_image.png'
+import gestorImage from '/src/assets/pasted_file_W8omNS_image.png'
+import menuImage from '/src/assets/pasted_file_ZGmTRt_image.png'
+import addComponentImage from '/src/assets/pasted_file_ZIYZvf_image.png'
+import newGestorImage from '/src/assets/pasted_file_gosm79_image.png'
+import iconoLogOut from '/src/assets/iconoLogOut.png'
+import iconoExtenso from '/src/assets/iconoExtenso.png'
+import gestorExtendidoImage from '/src/assets/pasted_file_e23re0_image.png'
+import filtrosImage from '/src/assets/FILTROS.png'
+import funcionalidadesImage from '/src/assets/pasted_file_lGc70Q_image.png'
+import menuContraidoImage from '/src/assets/pasted_file_tS9HRB_image.png'
+import gestorEstudiosImage from '/src/assets/gestorEstudios.png'
+import feedbackImage from '/src/assets/feedback.png'
+import logOutImage from '/src/assets/logOut.png'
+import informacionImage from '/src/assets/pasted_file_Ls7UMO_image.png'
+import logoImage from '/src/assets/logo.png'
+import gestorButtonsImage from '/src/assets/pasted_file_Gqij4B_image.png'
+import botonesFormulaGridImage from '/src/assets/botonesFormulaGrid.png'
+import addMaterialButtonImage from '/src/assets/pasted_file_knEV0v_image.png'
+import materialTypeImage from '/src/assets/pasted_file_mpiXZ8_image.png'
+import materialCreatedImage from '/src/assets/pasted_file_pNXedx_image.png'
+import addMaterialSapImage from '/src/assets/pasted_file_JNtLwB_image.png'
+import sapSearchImage from '/src/assets/pasted_file_VPxjZb_image.png'
+import searchMaterialImage from '/src/assets/pasted_file_X6mKPB_image.png'
+import materialFoundImage from '/src/assets/pasted_file_Ghaysw_image.png'
+import observacionesButtonImage from '/src/assets/pasted_file_VXdSrV_image.png'
+import observacionesModalImage from '/src/assets/pasted_file_iXnX8t_image.png'
+import boton3puntosImage from '/src/assets/boton3puntos.png'
+import guardarBotonImage from '/src/assets/guardarBoton.png'
+import exportarBotonImage from '/src/assets/exportarBoton.png'
+import exportPdfModalImage from '/src/assets/pasted_file_330NN6_image.png'
+import funcionalidadesMenuImage from '/src/assets/pasted_file_gcDpto_image.png'
+import feedbackButtonImage from '/src/assets/pasted_file_xZtP92_image.png'
+import logoutButtonImage from '/src/assets/pasted_file_lsWyiQ_image.png'
+import esmalteBotonImage from '/src/assets/esmalteBoton.png'
+import menuExtendedImage from '/src/assets/pasted_file_zcJDvR_image.png'
+import informacionTabImage from '/src/assets/pasted_file_nA9umq_image.png'
+import informacionContentImage from '/src/assets/pasted_file_WJpmIa_image.png'
+import pruebasTabImage from '/src/assets/pasted_file_wpIr7y_image.png'
+import oneImage from '/src/assets/1.png'
+import editMaterialNameImage from '/src/assets/pasted_file_JCSgMD_image.png'
+import editMaterialNameModalImage from '/src/assets/pasted_file_URVhkM_image.png'
+import duplicateColumnImage from '/src/assets/pasted_file_94oDyD_image.png'
+import duplicateColumnResultImage from '/src/assets/pasted_file_jQvJvh_image.png'
+import deleteColumnImage from '/src/assets/pasted_file_SHua3A_image.png'
+import sheetSystemImage from '/src/assets/pasted_file_NOQxpP_image.png'
+import sheetFunctionalitiesImage from '/src/assets/pasted_file_4unfen_image.png'
+import sheetNavigationImage from '/src/assets/pasted_file_pkrHCO_image.png'
+import testApplicationImage from '/src/assets/pasted_file_gcDpto_image.png'
+import pieceCodeSelectionImage from '/src/assets/pasted_file_xZtP92_image.png'
+import createPieceCodeSapImage from '/src/assets/pasted_file_lsWyiQ_image.png'
+import mainButtonsImage from '/src/assets/pasted_file_ZGmTRt_image.png'
+import threeDotsOptionsImage from '/src/assets/pasted_file_zcJDvR_image.png'
+import testReviewTableImage from '/src/assets/pasted_file_nA9umq_image.png'
+import pieceCodeSelectorImage from '/src/assets/pasted_file_WJpmIa_image.png'
+import resultsTableImage from '/src/assets/pasted_file_wpIr7y_image.png'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
@@ -773,7 +790,7 @@ function App() {
                         </p>
                         <div className="flex justify-center mb-4">
                           <img 
-                            src="./src/assets/pasted_file_6DOEvc_image.png" 
+                            src={dashboardImage} 
                             alt="Observaciones de la columna" 
                             className="w-64 h-auto rounded-lg shadow-sm"
                           />
@@ -783,7 +800,7 @@ function App() {
                         </p>
                         <div className="flex justify-center">
                            <img 
-                             src="./src/assets/1.png" 
+                             src={oneImage} 
                              alt="Icono bookmark observaciones" 
                              className="w-64 h-auto rounded-lg shadow-sm"
                            />
@@ -813,7 +830,7 @@ function App() {
                        </p>
                        <div className="flex justify-center mb-4">
                          <img 
-                           src="./src/assets/pasted_file_JCSgMD_image.png" 
+                           src={editMaterialNameImage} 
                            alt="Editar nombre del material" 
                            className="w-64 h-auto rounded-lg shadow-sm"
                          />
@@ -823,7 +840,7 @@ function App() {
                        </p>
                        <div className="flex justify-center">
                          <img 
-                           src="./src/assets/pasted_file_URVhkM_image.png" 
+                           src={editMaterialNameModalImage} 
                            alt="Ejemplo cambio de nombre" 
                            className="w-64 h-auto rounded-lg shadow-sm"
                          />
@@ -856,7 +873,7 @@ function App() {
                        </p>
                        <div className="flex justify-center mb-4">
                          <img 
-                           src="./src/assets/pasted_file_94oDyD_image.png" 
+                           src={duplicateColumnImage} 
                            alt="Duplicar columna" 
                            className="w-64 h-auto rounded-lg shadow-sm"
                          />
@@ -866,7 +883,7 @@ function App() {
                        </p>
                        <div className="flex justify-center">
                          <img 
-                           src="./src/assets/pasted_file_jQvJvh_image.png" 
+                           src={duplicateColumnResultImage} 
                            alt="Resultado duplicar columna" 
                            className="w-64 h-auto rounded-lg shadow-sm"
                          />
@@ -896,7 +913,7 @@ function App() {
                           </p>
                           <div className="flex justify-center mb-4">
                             <img 
-                              src="./src/assets/pasted_file_SHua3A_image.png" 
+                              src={deleteColumnImage} 
                               alt="Eliminar columna" 
                               className="w-64 h-auto rounded-lg shadow-sm"
                             />
@@ -934,7 +951,7 @@ function App() {
                        </p>
                        <div className="flex justify-center my-6">
                          <img 
-                           src="./src/assets/pasted_file_NOQxpP_image.png" 
+                           src={sheetSystemImage} 
                            alt="Sistema de hojas" 
                            className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                          />
@@ -948,7 +965,7 @@ function App() {
                        </ul>
                        <div className="flex justify-center my-6">
                           <img 
-                            src="./src/assets/pasted_file_4unfen_image.png" 
+                            src={sheetFunctionalitiesImage} 
                             alt="Funcionalidades de hojas" 
                             className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                           />
@@ -958,7 +975,7 @@ function App() {
                         </p>
                         <div className="flex justify-center my-6">
                           <img 
-                            src="./src/assets/pasted_file_pkrHCO_image.png" 
+                            src={sheetNavigationImage} 
                             alt="Navegación entre hojas" 
                             className="w-auto h-auto rounded-lg shadow-sm mx-auto"
                           />
