@@ -16,8 +16,6 @@ import {
   CheckCircle, 
   BarChart3,
   Search,
-  Moon,
-  Sun,
   ChevronRight,
   ChevronDown,
   ChevronUp,
@@ -93,7 +91,6 @@ import resultsTableImage from '/src/assets/pasted_file_wpIr7y_image.png'
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
-  const [darkMode, setDarkMode] = useState(false)
   const [activeSection, setActiveSection] = useState('inicio')
   const [copiedUrl, setCopiedUrl] = useState('')
   const [addComponentExpanded, setAddComponentExpanded] = useState(false)
@@ -108,13 +105,7 @@ function App() {
   const [guardadoExpanded, setGuardadoExpanded] = useState(false)
   const [exportarPdfExpanded, setExportarPdfExpanded] = useState(false)
 
-  useEffect(() => {
-    if (darkMode) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [darkMode])
+
 
   // Scroll to top when section changes
   useEffect(() => {
@@ -1711,19 +1702,7 @@ function App() {
           </nav>
         </ScrollArea>
 
-        {sidebarOpen && (
-          <div className="p-4 border-t">
-            <Button
-              variant="outline"
-              size="sm"
-              className="w-full"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? <Sun className="h-4 w-4 mr-2" /> : <Moon className="h-4 w-4 mr-2" />}
-              {darkMode ? 'Modo Claro' : 'Modo Oscuro'}
-            </Button>
-          </div>
-        )}
+
       </div>
 
       {/* Main Content */}
